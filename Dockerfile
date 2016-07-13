@@ -20,7 +20,7 @@ RUN apt-get install --yes \
     php5-xdebug \
     python-mysqldb \
     python-sqlalchemy \
-    python-pip
+    python-pip \
     npm \
     nodejs-legacy \
     bundler \
