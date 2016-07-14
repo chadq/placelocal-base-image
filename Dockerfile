@@ -2,11 +2,11 @@ FROM debian:jessie
 
 RUN apt-get -y update
 RUN apt-get -y upgrade
+RUN apt-get install --yes gdebi-core
 RUN apt-get install --yes \
     curl \
     default-jre-headless \
     git \
-    gdebi-core \
     php5-cli \
     libapache2-mod-php5 \
     php-pear \
