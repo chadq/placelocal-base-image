@@ -23,7 +23,7 @@ RUN apt-get install --yes \
     python-pip \
     npm \
     nodejs-legacy \
-    bundler \
+    bundler 
 
 RUN npm install -g n
 RUN n stable
