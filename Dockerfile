@@ -11,6 +11,7 @@ RUN apt-get install --yes \
     php-pear \
     php5-apcu \
     php5-gd \
+    git \
     php5-geoip \
     php5-imagick \
     php5-mcrypt \
@@ -23,11 +24,10 @@ RUN apt-get install --yes \
     python-pip \
     npm \
     nodejs-legacy \
-    bundler 
+    bundler
 
 RUN apt-get install --yes default-jre-headless
 
 RUN npm install -g n
 RUN n stable
 RUN npm install -g npm
-
