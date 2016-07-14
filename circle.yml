@@ -1,0 +1,20 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker build -t paperg/placelocal-base-image .
+
+test:
+  override:
+    - echo 'no tests yet'
+
+deployment:
+  release:
+    branch: master
+    owner: paperg
+    commands:
+      - docker login -e="." -u="$QUAY_USERNAME" -p="$QUAY_PASSWORD" quay.io
+      - docker tag paperg/placelocal-base-image quay.io/paperg/placelocal-base-image
+      - docker push quay.io/paperg/placelocal-base-image
